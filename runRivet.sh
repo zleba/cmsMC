@@ -1,7 +1,7 @@
 #export LD_LIBRARY_PATH_STORED=$LD_LIBRARY_PATH
-nJobs=50
+nJobs=500
 
-jobName=myRun2
+jobName=myRunPy
 
 mkdir -p farm/$jobName/logs
 mkdir -p farm/$jobName/histos

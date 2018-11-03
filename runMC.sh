@@ -1,4 +1,4 @@
-nEv=50
+nEv=1000
 #prepid=JME-RunIIFall18GS-00012
 prepid=JME-RunIIFall18GS-00004
 analysis=CMS_2016_I1459051
@@ -9,8 +9,10 @@ curl -s --insecure https://cms-pdmv.cern.ch/mcm/public/restapi/requests/get_setu
 chmod u+x setup.sh
 . ./setup.sh
 
+seed=${RANDOM}${RANDOM}
+sed -i "/process.maxEvents/i process.RandomNumberGeneratorService.generator.initialSeed = $seed" ${prepid}_cfg.py
+
 cat <<EOF >>  ${prepid}_cfg.py
-process.RandomNumberGeneratorService.generator.initialSeed = 6
 def customise(process):
     process.load('GeneratorInterface.RivetInterface.rivetAnalyzer_cfi')
     process.rivetAnalyzer.AnalysisNames = cms.vstring('$analysis')

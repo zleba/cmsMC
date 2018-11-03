@@ -8,7 +8,7 @@
 
 #+PreCmd        = "tree"
 #+PreArguments  = "-o tree_before.$(Cluster).$(Process).txt"
-getenv              = True
+getenv              = False
 executable          =  runRivet.run
 arguments           = "$(jobName) $(Process)"
 transfer_executable = False
