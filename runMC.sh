@@ -1,16 +1,22 @@
 #!/bin/bash
+
+nEv=20
+#prepid=JME-RunIIFall18GS-00012
+prepid=JME-RunIIFall18GS-00004
+#prepid=JME-RunIIFall18wmLHEGS-00014
+#prepid=HIG-RunIIFall18wmLHEGS-00002
+analysis=CMS_2016_I1459051
+
+
+
+if [ "$#" -eq 3 ]
+then
 prepid=$1
 analysis=$2
 nEv=$3
+fi
 
 
-
-#nEv=20
-#prepid=JME-RunIIFall18GS-00012
-#prepid=JME-RunIIFall18GS-00004
-#prepid=JME-RunIIFall18wmLHEGS-00014
-#prepid=HIG-RunIIFall18wmLHEGS-00002
-#analysis=CMS_2016_I1459051
 xsec=1
 if [[ $prepid == *wmLHE* ]]
 then
