@@ -19,12 +19,7 @@ nEv=$5
 echo $jobName  $prepid  $analysis  $nJobs  $nEv
 fi
 
-exit 0
-
-jobName=Py8qcd
-prepid=JME-RunIIFall18GS-00004
-analysis=CMS_2016_I1459051
-
+#exit 0
 
 
 mkdir -p farm/$jobName/logs
