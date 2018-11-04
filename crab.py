@@ -14,7 +14,7 @@ if __name__ == '__main__':
     config.JobType.pluginName = 'PrivateMC'
     config.JobType.psetName = 'JME-RunIIFall18GS-00004_cfg.py'
     config.JobType.disableAutomaticOutputCollection = True
-    config.JobType.outputFiles = 'Rivet.yoda'
+    config.JobType.outputFiles = ['Rivet.yoda']
 
     config.Data.outputPrimaryDataset = 'MinBias'
     config.Data.splitting = 'EventBased'
@@ -26,6 +26,7 @@ if __name__ == '__main__':
     config.Data.outputDatasetTag = 'CRAB3_tutorial_May2015_MC_generation'
     config.Data.ignoreLocality = True
 
+    config.Site.whitelist = ["T2_*"] #for ignoreLocality
     config.Site.storageSite = "T2_DE_DESY"
 
 
