@@ -10,7 +10,7 @@
 #+PreArguments  = "-o tree_before.$(Cluster).$(Process).txt"
 getenv              = False
 executable          =  runRivet.run
-arguments           = "$(jobName) $(Process)"
+arguments           = "$(jobName)  $(prepid)  $(analysis)  $(nEv)  $(Process)"
 transfer_executable = False
 universe            = vanilla
 #input               = /nfs/dust/my/path/to/data/mypayload.data

@@ -1,10 +1,16 @@
-#export LD_LIBRARY_PATH=$NAFTMP:$LD_LIBRARY_PATH_STORED
+#!/bin/bash
+jobName=$1
+prepid=$2
+analysis=$3
+nEv=$4
+Process=$5
 
-cp farm/$1/runMC.sh $TMP
+
+cp farm/$jobName/runMC.sh $TMP
 oldDir=$PWD
 
 cd $TMP
-./runMC.sh
+./runMC.sh $prepid $analysis $nEv
 echo Running MC
 ls *.yoda
-cp Rivet.yoda $oldDir/farm/$1/histos/Rivet${2}.yoda
+cp Rivet.yoda $oldDir/farm/$jobName/histos/Rivet${Process}.yoda

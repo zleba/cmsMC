@@ -1,0 +1,13 @@
+#!/bin/bash
+nJobs=100
+nEv=50
+
+jobName=Py8qcd
+prepid=JME-RunIIFall18GS-00004
+analysis=CMS_2016_I1459051
+
+mkdir -p farm/$jobName/logs
+mkdir -p farm/$jobName/histos
+cp runMC.sh farm/$jobName
+
+condor_submit nJobs=$nJobs jobName=$jobName prepid=$prepid analysis=$analysis nEv=$nEv runRivet.submit

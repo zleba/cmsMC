@@ -1,10 +1,16 @@
 #!/bin/bash
-nEv=10
+prepid=$1
+analysis=$2
+nEv=$3
+
+
+
+#nEv=20
 #prepid=JME-RunIIFall18GS-00012
-prepid=JME-RunIIFall18GS-00004
+#prepid=JME-RunIIFall18GS-00004
 #prepid=JME-RunIIFall18wmLHEGS-00014
 #prepid=HIG-RunIIFall18wmLHEGS-00002
-analysis=CMS_2016_I1459051
+#analysis=CMS_2016_I1459051
 xsec=1
 if [[ $prepid == *wmLHE* ]]
 then
@@ -39,7 +45,7 @@ xsec=`grep "^After filter: final cross section =" stderr.log | awk '{print $7}'`
 
 
 #setup version for merge of yoda files
-cmsRel=CMSSW_9_3_3
+cmsRel=CMSSW_10_1_0
 source /cvmfs/cms.cern.ch/cmsset_default.sh
 #export SCRAM_ARCH=slc6_amd64_gcc700
 if [ -r $cmsRel/src ] ; then
