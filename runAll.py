@@ -7,10 +7,12 @@ with open("listRivet") as f:
 analysis=""
 for d in lines:
     ds = d.strip()
-    if len(ds) < 1: continue
+    if len(ds) < 2: continue
     if ds[0] == "%": continue
-    if ds[0] == "#":
+    elif ds[0] == "#" and ds[1] != "#":
         analysis=ds[1:]
+    elif ds[0] == "#" and ds[1] == "#":
+        glName=ds[2:]
     else:
         if analysis == '': continue
         r = ds.split(' ')
@@ -20,5 +22,6 @@ for d in lines:
         evPerJob = nEv / nJob
         #print r[0], r[1], analysis, nJob, evJob
         from subprocess import call
-        call(['./runRivet', r[0], r[1], analysis, str(nJob), str(evJob)])
+        name=glName+'/'+r[0]
+        call(['./runRivet', name, r[1], analysis, str(nJob), str(evJob)])
 
