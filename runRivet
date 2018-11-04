@@ -21,9 +21,10 @@ fi
 
 #exit 0
 
+rm -rf farm/$jobName
 
 mkdir -p farm/$jobName/logs
 mkdir -p farm/$jobName/histos
 cp runMC.sh farm/$jobName
 
-condor_submit nJobs=$nJobs jobName=$jobName prepid=$prepid analysis=$analysis nEv=$nEv runRivet.submit
+condor_submit -batch-name $jobName nJobs=$nJobs jobName=$jobName prepid=$prepid analysis=$analysis nEv=$nEv runRivet.submit
