@@ -16,8 +16,8 @@ for d in lines:
     else:
         if analysis == '': continue
         r = ds.split(' ')
-        nEv= int(r[2]) / 1000
-        evJob = 300
+        nEv= int(r[2]) / 300
+        evJob = 1000
         nJob = nEv / evJob
         evPerJob = nEv / nJob
         #print r[0], r[1], analysis, nJob, evJob

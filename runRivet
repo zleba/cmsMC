@@ -28,4 +28,4 @@ mkdir -p farm/$jobName/histos
 cp runMC.sh farm/$jobName
 
 tag=`basename $jobName`
-echo condor_submit -batch-name $tag nJobs=$nJobs jobName=$jobName prepid=$prepid analysis=$analysis nEv=$nEv runRivet.submit
+condor_submit -batch-name $tag nJobs=$nJobs jobName=$jobName prepid=$prepid analysis=$analysis nEv=$nEv runRivet.submit
