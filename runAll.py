@@ -8,7 +8,7 @@ analysis=""
 for d in lines:
     ds = d.strip()
     if len(ds) < 2: continue
-    if ds[0] == "%": continue
+    if ds[0] == "%" or ds[0] == "!": continue
     elif ds[0] == "#" and ds[1] != "#":
         analysis=ds[1:]
     elif ds[0] == "#" and ds[1] == "#":
@@ -16,8 +16,8 @@ for d in lines:
     else:
         if analysis == '': continue
         r = ds.split(' ')
-        nEv= int(r[2]) / 300
-        evJob = 1000
+        nEv= int(r[2]) / 100
+        evJob = 4000
         nJob = nEv / evJob
         evPerJob = nEv / nJob
         #print r[0], r[1], analysis, nJob, evJob

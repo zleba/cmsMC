@@ -1,5 +1,7 @@
-setName='QCD_Pt-15to7000_TuneCP5_Flat2018_13TeV_pythia8'
-prepid='JME-RunIIFall18GS-00004'
+#!/bin/env python
+setName='mgTest'
+#prepid='JME-RunIIFall18GS-00012'
+prepid='HIG-RunIIFall18wmLHEGS-00002'
 
 if __name__ == '__main__':
 

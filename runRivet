@@ -1,10 +1,10 @@
 #!/bin/bash
 
-jobName=Py8qcd
-prepid=JME-RunIIFall18GS-00004
+jobName=hgtest2
+prepid=JME-RunIIFall18wmLHEGS-00020
 analysis=CMS_2016_I1459051
 
-nJobs=100
+nJobs=1
 nEv=50
 
 

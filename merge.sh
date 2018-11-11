@@ -30,4 +30,4 @@ do
 done
 
 #plot rivet
-rivet-mkhtml --mc-errs -o farm/qcdPlots   farm/*/*.yoda
+#rivet-mkhtml --mc-errs -o farm/qcdPlots   farm/*/*.yoda

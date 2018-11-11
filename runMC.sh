@@ -30,9 +30,8 @@ else
 cmsDriver="cmsDriver.py Configuration/GenProduction/python/${prepid}-fragment.py  --mc --step GEN --datatier=GEN-SIM-RAW --conditions auto:mc --eventcontent    RAWSIM --no_exec   -n $nEv --python_filename=${prepid}_cfg.py"
 fi
 
-curl -s --insecure https://cms-pdmv.cern.ch/mcm/public/restapi/requests/get_setup/$prepid  | sed "s#^cmsDriver.py .*#$cmsDriver#" > setup.sh
-
-
+curl -s --insecure --retry 100 https://cms-pdmv.cern.ch/mcm/public/restapi/requests/get_setup/$prepid  | sed "s#^cmsDriver.py .*#$cmsDriver#" > setup.sh
+sed -i "s/--retry 2/--retry 100/" setup.sh
 echo "before setup run"
 #cat setup.sh
 chmod u+x setup.sh
@@ -84,5 +83,6 @@ eval `scram runtime -sh`
 
 scram b
 cd ../../
+echo yodascale -c  ".* ${xsec}x" Rivet.yoda
 yodascale -c  ".* ${xsec}x" Rivet.yoda
 mv -f Rivet-scaled.yoda Rivet.yoda
