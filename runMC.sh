@@ -1,16 +1,31 @@
 #!/bin/bash
 
-nEv=20
+nEv=50
 #prepid=JME-RunIIFall17GS-00006
 #prepid=JME-RunIIFall18GS-00012
 
 #prepid=JME-RunIIFall18wmLHEGS-00023
 
-prepid=JME-RunIIFall18GS-00004
+#prepid=JME-RunIIFall18wmLHEGS-00029
+
+#prepid=JME-RunIIFall18GS-00003
+prepid=JME-RunIIFall18GS-00019
+prepid=JME-RunIIFall18GS-00021
+
+#hg7
+#prepid=JME-RunIIFall18GS-00022
+#hg7
+prepid=JME-RunIIFall18GS-00023
+#4C
+prepid=JME-RunIIFall18GS-00025
+
+
+
+
 #prepid=JME-RunIIFall18wmLHEGS-00017
 #prepid=JME-RunIIFall18wmLHEGS-00014
 #prepid=HIG-RunIIFall18wmLHEGS-00002
-analysis=CMS_2016_I1459051
+analysis=CMS_2019_incJets
 
 
 
@@ -32,7 +47,11 @@ fi
 
 curl -s --insecure --retry 100 https://cms-pdmv.cern.ch/mcm/public/restapi/requests/get_setup/$prepid  | sed "s#^cmsDriver.py .*#$cmsDriver#" > setup.sh
 sed -i "s/--retry 2/--retry 100/" setup.sh
+#sed -i "/cd CMSSW_.*src/a cp -r /nfs/dust/cms/user/zlebcr/met/mcProduction/cmsMC/CMSSW_10_2_13_patch1/src/GeneratorInterface ." setup.sh
 echo "before setup run"
+
+echo export RIVET_ANALYSIS_PATH=/nfs/dust/cms/user/zlebcr/met/cmsMC/rivetAnals  >> setup.sh
+
 #cat setup.sh
 chmod u+x setup.sh
 . ./setup.sh
