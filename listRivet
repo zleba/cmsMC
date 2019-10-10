@@ -37,35 +37,35 @@
 
 
 !Pythia8 CP5
-##QCD_Pt-15to7000_TuneCP5_Flat_13TeV_pythia8_Had  150
-QCD_Pt-15to7000_TuneCP5_Flat_13TeV_pythia8_Had   JME-RunIIFall18GS-00020   2600000
+##QCD_Pt-15to7000_TuneCP5_Flat_13TeV_pythia8_Had  200
+QCD_Pt-15to7000_TuneCP5_Flat_13TeV_pythia8_Had   JME-RunIIFall18GS-00020   26000000
 
-##QCD_Pt-15to7000_TuneCP5_Flat_13TeV_pythia8_noHad 30
-QCD_Pt-15to7000_TuneCP5_Flat_13TeV_pythia8_noHad JME-RunIIFall18GS-00019  2600000
+##QCD_Pt-15to7000_TuneCP5_Flat_13TeV_pythia8_noHad 40
+QCD_Pt-15to7000_TuneCP5_Flat_13TeV_pythia8_noHad JME-RunIIFall18GS-00019  26000000
 
 
 !Pythia8 CP1
-##QCD_Pt-15to7000_TuneCP1_Flat_13TeV_pythia8_Had  150
-QCD_Pt-15to7000_TuneCP1_Flat_13TeV_pythia8_Had   JME-RunIIFall18GS-00021   2600000
+##QCD_Pt-15to7000_TuneCP1_Flat_13TeV_pythia8_Had  200
+QCD_Pt-15to7000_TuneCP1_Flat_13TeV_pythia8_Had   JME-RunIIFall18GS-00021   26000000
 
-##QCD_Pt-15to7000_TuneCP1_Flat_13TeV_pythia8_noHad 30
-QCD_Pt-15to7000_TuneCP1_Flat_13TeV_pythia8_noHad JME-RunIIFall18GS-00024   2600000
+##QCD_Pt-15to7000_TuneCP1_Flat_13TeV_pythia8_noHad 40
+QCD_Pt-15to7000_TuneCP1_Flat_13TeV_pythia8_noHad JME-RunIIFall18GS-00024   26000000
 
 
 !Pythia8 4C
-##QCD_Pt-15to7000_Tune4C_Flat_13TeV_pythia8_Had  150
-QCD_Pt-15to7000_Tune4C_Flat_13TeV_pythia8_Had   JME-RunIIFall18GS-00025    2600000
+##QCD_Pt-15to7000_Tune4C_Flat_13TeV_pythia8_Had  200
+QCD_Pt-15to7000_Tune4C_Flat_13TeV_pythia8_Had   JME-RunIIFall18GS-00025    26000000
 
-##QCD_Pt-15to7000_Tune4C_Flat_13TeV_pythia8_noHad 30
-QCD_Pt-15to7000_Tune4C_Flat_13TeV_pythia8_noHad JME-RunIIFall18GS-00026   2600000
+##QCD_Pt-15to7000_Tune4C_Flat_13TeV_pythia8_noHad 40
+QCD_Pt-15to7000_Tune4C_Flat_13TeV_pythia8_noHad JME-RunIIFall18GS-00026   26000000
 
 
 !Herwig7 CH3
-##QCD_Pt-15to7000_TuneCH3_Flat_13TeV_herwig7_Had 150
-QCD_Pt-15to7000_TuneCH3_Flat_13TeV_herwig7_Had   JME-RunIIFall18GS-00022 2600000
+##QCD_Pt-15to7000_TuneCH3_Flat_13TeV_herwig7_Had 200
+QCD_Pt-15to7000_TuneCH3_Flat_13TeV_herwig7_Had   JME-RunIIFall18GS-00022 26000000
 
-##QCD_Pt-15to7000_TuneCH3_Flat_13TeV_herwig7_NoHad 30
-QCD_Pt-15to7000_TuneCH3_Flat_13TeV_herwig7_NoHad JME-RunIIFall18GS-00023 2600000
+##QCD_Pt-15to7000_TuneCH3_Flat_13TeV_herwig7_noHad 40
+QCD_Pt-15to7000_TuneCH3_Flat_13TeV_herwig7_noHad JME-RunIIFall18GS-00023 26000000
 
 
 

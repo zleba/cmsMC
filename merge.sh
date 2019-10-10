@@ -19,7 +19,7 @@ tag=[A-Z]*
 for dd in farm/[A-Z]*/[A-Z]*/
 do
    d=`basename $dd`
-   rm -f $dd/${d}.yoda
+   #rm -f $dd/${d}.yoda
    echo before merge
    #echo  yodamerge -o $dd/${d}.yoda $dd/histos/Rivet*.yoda
    yodamerge -o $dd/${d}.yoda $dd/histos/Rivet*.yoda
@@ -33,7 +33,7 @@ for dd in farm/[A-Z]*/
 do
    d=`basename $dd`
 
-   rm -f $dd/${d}.yoda  $dd/${d}.root
+   #rm -f $dd/${d}.yoda  $dd/${d}.root
    yodamerge --add -o $dd/${d}.yoda   $dd/*/*.yoda
    yoda2root $dd/${d}.yoda  $dd/${d}.root
 done
